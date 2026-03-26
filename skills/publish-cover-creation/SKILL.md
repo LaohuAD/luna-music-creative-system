@@ -251,7 +251,7 @@ description: |
 - `error` (optional)
   - 仅在输入不完整时返回
 
-- 并且将返回的内容保存成为markdown格式，保存在你的工作区：workspace/projects/luna-music-creative-system/publish-cover-creation/{文件名}-{日期}.md
+- 并且将返回的内容保存成为markdown格式，保存在你的工作区：workspace/projects/luna-music-creative-system/publish-cover-creation/{封面标题}-{日期}.md
 
 ---
 

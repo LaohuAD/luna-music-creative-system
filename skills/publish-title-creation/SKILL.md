@@ -65,8 +65,6 @@ description: |
 
 - `references/self-media-title-guide.md`
   - 该文档详细阐述了标题核心原则、平台字数限制、风格差异、情绪驱动、中文模板、红线边界以及标题质量评判体系。
-- `references/self-media-cover-design-guide.md`
-  - 该文档详细阐述了封面核心原则、构图、颜色、人物表情、文字设计、场景道具、图文配合、平台规范和评判体系。
 
 ## 6. 使用示例
 

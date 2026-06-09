@@ -1,153 +1,400 @@
-# Luna Music Creative System
+# 老胡音乐作品生产系统
 
-## 中文说明
+一个面向 AI Agent 的对话式音乐创作工作流项目。
 
-### 项目简介
+它不是歌词模板合集，也不是音乐生成平台。它的作用是把一句灵感，逐步推进成一首可生成、可修改、可复盘、可长期进化的音乐作品。
 
-**老胡的 Luna 音乐创作系统**，是一套面向自媒体账号、音乐账号与内容创作者的 AI 音乐创作方法体系。
+整个系统通过 Markdown 文件、作品目录、阶段确认记录和项目专属 skill 工作，不需要前端、后端、登录系统或表单页面。
 
-它的目标，不是单独教会用户使用某一个工具，而是帮助创作者把**选题、歌词、画面、封面、发布、分发与后续变现**连接成一条更清晰、更稳定的创作路径。
+## 适合谁
 
-与其说它是一个单点技能集合，不如说它更像一套围绕“内容创作结果”展开的系统化工作流：从灵感进入、选题提炼、音乐内容生成，到视觉包装、发布表达，再到账号运营与收益承接，每个环节都被拆解成可以复用、可以执行、可以持续优化的方法模块。
+- 想用 AI 辅助写歌，但不想只得到一版随机歌词的人。
+- 想把灵感、题眼、副歌、曲式、曲风、歌词、演唱控制分阶段打磨的人。
+- 想长期沉淀个人音乐创作方法，而不是每次重新解释偏好的人。
+- 想让 AI Agent 在本地项目里按固定规则协作创作的人。
 
-### 这个系统要解决什么问题
+## 这个项目能做什么
 
-在真实创作过程中，很多创作者并不是不会做内容，而是经常卡在以下这些问题上：
+### 1. 从灵感提炼选题题眼
 
-- 内容能做出来，但流量结果不稳定
-- 学了很多方法，却不知道该怎么组合使用
-- 知道作品可以发布、分发和变现，却没有一条清晰的创作发布流程
-- 能靠灵感偶尔做出一条作品，却很难稳定复制结果
-- 工具越学越多，但创作链路反而越混乱
+输入一句灵感、一段口述、一个故事或一个情绪，系统会帮助整理：
 
-Luna Music Creative System 的作用，就是通过**系统化拆解创作环节与执行顺序**，帮助创作者提升内容产出的稳定性，降低试错成本，并逐步建立从创作到账号运营再到收益承接的完整能力。
+- 表层需求：你直接说了什么。
+- 真实目标：你真正想让这首歌表达什么。
+- 嘴替对象：这首歌替谁说话。
+- 具体场景：听众从哪个画面进入。
+- 核心关系：谁和谁之间发生了什么变化。
+- 情绪债务：亏欠、误解、告别、后悔、释怀等哪一笔最关键。
+- 副歌核心句：哪一句最适合被记住、转发、合唱或剪成短视频。
 
-### 系统核心能力
+### 2. 设计曲式和音乐风格
 
-本项目围绕音乐内容创作与自媒体传播的关键环节进行组织，核心关注点包括但不限于：
+在题眼和副歌核心句确认后，系统会进入曲式与风格阶段，输出：
 
-- **选题与方向判断**：从灵感、情绪、故事、观点中提炼更具传播潜力的创作方向
-- **歌词与核心表达生成**：提升内容的情绪承载力、记忆点与传播性
-- **音乐与风格控制**：让作品在表达、听感与人群定位之间更统一
-- **视觉包装**：围绕封面、画面、角色与分镜提升点击与停留
-- **发布与分发**：帮助作品从“做出来”走向“发出去、被看见、被传播” 
-- **变现承接意识**：让创作系统不仅服务于表达，也服务于账号增长与收益连接
+- 主风格和辅助风格。
+- BPM 范围。
+- Intro / Verse / Pre-Chorus / Chorus / Bridge / Outro 的段落功能。
+- 能量曲线。
+- 纯音乐 style prompt。
+- hook space 和人声预留空间。
 
-### 适用对象
+### 3. 按曲式写完整歌词
 
-这个系统适合以下几类创作者：
+系统不是直接把观点改写成押韵分行，而是根据已确认的题眼、核心画面资产、主风格和曲式骨架填词。
 
-- 经营自媒体账号、音乐账号的内容创作者
-- 希望用 AI 提升创作效率与稳定性的个人创作者
-- 想把灵感型创作升级为系统型创作的人
-- 想把作品发布、传播与账号运营串起来的人
-- 希望逐步建立“从内容到变现”闭环的人
+重点检查：
 
-### 仓库定位
+- 歌词是否像人唱的话。
+- 副歌是否兑现题眼。
+- 句尾是否可唱。
+- 韵脚是否连续。
+- 是否有具体画面、动作、物件和声音锚点。
+- Verse / Pre / Chorus / Bridge 是否各自承担明确功能。
 
-这个仓库既是一个**方法体系仓库**，也是一个**持续演化的创作工作流项目**。
+### 4. 诊断和优化歌词
 
-它目前承载的内容包括：
+如果已有歌词，系统可以输出歌词优化建议：
 
-- 创作系统总说明
-- 各环节 Skill 模块
-- 选题、歌词、封面、视频等相关能力节点
-- 可复用的创作参考资料与方法文档
+- 哪些问题是局部词句问题。
+- 哪些问题是结构问题。
+- 哪些问题是方向级问题。
+- 副歌是否不押韵、不好唱、没有记忆点。
+- 哪些句子像 AI 平均句、说明句或文案句。
+- 可直接替换的修改建议。
 
-未来它也会继续沉淀更多关于音乐内容创作、传播策略、视觉包装与变现承接的系统经验。
+### 5. 生成演唱控制和最终 style prompt
 
-### 使用思路
+当歌词确认后，系统会生成可投喂 AI 音乐平台的最终内容：
 
-推荐把这个项目理解为一个“创作操作系统”，而不是若干孤立技能文件的堆叠。
+- 最终人声版 style prompt。
+- 带 section-level 控制的歌词。
+- 少量 key-line 演唱控制。
+- 人声音色、距离、动态、气口、咬字、和声、声场说明。
+- 哪些句子需要停顿、拖音、重复或让伴奏让位。
 
-比较合理的使用方式通常是：
+### 6. 审查、复盘和规则进化
 
-1. 从灵感、情绪、故事或观点出发，判断是否具备传播潜力
-2. 将灵感整理成更明确的音乐选题方向
-3. 围绕选题完成歌词、风格、画面与包装设计
-4. 结合发布场景调整封面、标题、视觉表达与传播角度
-5. 在实际发布与反馈中持续优化内容结构与工作流顺序
+系统会把创作和生成结果回流成长期经验：
 
-### 项目愿景
+- 题眼是否兑现。
+- 副歌核心句是否保留原意。
+- 曲式是否服务情绪。
+- 歌词是否可唱、可记、有真人痕迹。
+- style prompt 是否具体。
+- 演唱控制是否突出传播资产。
+- 本次失败或成功是否需要沉淀到共享规则。
 
-Luna Music Creative System 希望做的，不只是“帮助用户做出一首歌”，而是帮助创作者逐步建立一种更稳定的能力：
+## 核心流程
 
-**把灵感变成作品，把作品变成传播，把传播变成可持续的创作结果。**
+默认采用分阶段确认制：
 
----
+```text
+灵感输入
+→ 选题角度 / 题眼 / 副歌核心句
+→ 人工确认
+→ 曲式结构 / 纯音乐风格提示词
+→ 人工确认
+→ 按曲式填词
+→ 人工确认
+→ 歌词优化建议
+→ 人工反馈 / 采纳
+→ 演唱控制和最终 style prompt
+→ 人工确认
+→ 审查 / 归档 / 经验沉淀
+```
 
-## English
+除非你明确说“一步到位”“直接做完”“不要中途确认”，否则系统不会默认跳过确认门。
 
-### Overview
+这个设计是为了避免一个常见问题：上一阶段的题眼、副歌核心句还没打磨好，AI 就急着进入下一阶段，导致后面的曲式、歌词和演唱控制全部建立在不稳的基础上。
 
-**Luna Music Creative System**, created by Laohu, is an AI-driven music creation methodology designed for self-media accounts, music creators, and content producers.
+## 快速开始
 
-Its purpose is not to teach the use of one isolated tool. Instead, it helps creators connect **topic selection, lyrics, visuals, cover design, publishing, distribution, and monetization** into a clearer and more reliable creative workflow.
+### 1. 获取项目
 
-Rather than being a collection of disconnected skills, this project is better understood as a systematic framework centered on creative outcomes. From raw inspiration and topic refinement to music generation, visual packaging, publishing expression, account growth, and revenue connection, each stage is broken down into reusable and executable modules that can be continuously improved.
+这个仓库有两种用法：一种是安装 Agent skills，另一种是获取完整项目模板。
 
-### Problems This System Tries to Solve
+方式 A：只安装 skills。
 
-In real-world creative work, the problem is often not “being unable to create,” but rather getting stuck in issues such as:
+```bash
+npx skills add LaohuAD/luna-music-creative-system
+```
 
-- content can be produced, but traffic results remain unstable
-- many methods are learned, but creators do not know how to combine them effectively
-- creators know content can be published, distributed, and monetized, but lack a clear workflow
-- inspiration may occasionally lead to a strong piece, but the result is hard to reproduce consistently
-- the more tools people learn, the more chaotic the overall process becomes
+只想安装某一个 skill：
 
-Luna Music Creative System addresses these issues by **systematically breaking down the creative stages and execution order**, helping creators improve the consistency of output, reduce trial-and-error costs, and gradually build a complete capability from creation to account operation to revenue conversion.
+```bash
+npx skills add LaohuAD/luna-music-creative-system --skill laohu_music
+```
 
-### Core Capabilities
+这会把 `skills/*/SKILL.md` 安装到当前 Agent 的 skills 目录。适合你已经有自己的项目，只想复用老胡音乐创作能力。
 
-This project is organized around the critical stages of music content creation and self-media distribution. Its core focus includes, but is not limited to:
+注意：`npx skills add` 主要安装 skill 本体。完整的作品目录、共享资产库、模板库和检查脚本仍在这个仓库里。如果你想使用完整音乐作品生产系统，建议用下面的克隆或 `degit` 方式获取整个项目。
 
-- **Topic discovery and direction judgment**: extracting high-potential directions from inspiration, emotion, story, and perspective
-- **Lyrics and core expression generation**: improving emotional impact, memorability, and shareability
-- **Music and style control**: making expression, listening experience, and audience positioning more coherent
-- **Visual packaging**: improving clicks and retention through covers, visuals, characters, and storyboards
-- **Publishing and distribution**: helping works move from “being created” to “being published, seen, and shared”
-- **Monetization awareness**: ensuring the system serves not only expression, but also account growth and revenue connection
+方式 B：克隆完整项目。
 
-### Who This Is For
+```bash
+git clone https://github.com/LaohuAD/luna-music-creative-system.git
+cd luna-music-creative-system
+```
 
-This system is suitable for:
+方式 C：用 `npx degit` 拉一份干净模板。
 
-- creators running self-media or music-focused accounts
-- individual creators who want to improve creative efficiency and consistency with AI
-- people who want to evolve from inspiration-driven creation to system-driven creation
-- creators who want to connect production, publishing, distribution, and account operation
-- those aiming to build a complete loop from content creation to monetization
+```bash
+npx degit LaohuAD/luna-music-creative-system my-music-system
+cd my-music-system
+```
 
-### Repository Positioning
+如果你想保留 `00_输入原料/`、`01_作品项目/`、`02_共享资产库/`、`skills/` 这整套目录结构，推荐用方式 B 或 C。
 
-This repository serves both as a **methodology repository** and as an **evolving creative workflow project**.
+### 2. 检查项目结构
 
-It currently includes:
+```bash
+bash skills/laohu_music/scripts/check_laohu_music.sh
+```
 
-- a general overview of the creative system
-- skill modules for different stages of creation
-- capability nodes for topics, lyrics, cover design, video, and more
-- reusable references and supporting documents for creative execution
+如果输出：
 
-Over time, it will continue to accumulate system knowledge related to music content creation, distribution strategy, visual packaging, and monetization connection.
+```text
+老胡音乐项目检查通过
+```
 
-### How to Use
+说明核心目录、规则文件和脚本都在。
 
-It is best to think of this project as a “creative operating system,” rather than a pile of isolated skill files.
+### 3. 创建一首新作品
 
-A practical way to use it is usually:
+```bash
+bash skills/laohu_music/scripts/create_music_project.sh "我的歌名"
+```
 
-1. start with inspiration, emotion, story, or perspective, and judge whether it has communication potential
-2. refine that inspiration into a clearer music topic direction
-3. build lyrics, style, visuals, and packaging around the chosen topic
-4. adjust covers, titles, visual expression, and distribution angles based on the publishing context
-5. continuously optimize the content structure and workflow based on publishing feedback
+也可以指定日期：
 
-### Vision
+```bash
+bash skills/laohu_music/scripts/create_music_project.sh "我的歌名" "2026-06-09"
+```
 
-Luna Music Creative System is not only meant to help creators “make a song.”
+脚本会在 `01_作品项目/进行中/` 下创建一套完整作品目录。
 
-Its deeper goal is to help creators build a more stable capability:
+### 4. 和 AI Agent 对话创作
 
-**turn inspiration into works, turn works into distribution, and turn distribution into sustainable creative results.**
+在支持项目上下文和本地文件读写的 AI Agent 里打开本项目，然后直接输入你的灵感。
+
+示例：
+
+```text
+我想写一首流行歌，灵感是：看人之短，天下无可交之人；看人之长，世间处处皆是吾师。所有相遇皆是渡我。
+```
+
+系统应该先进入选题题眼阶段，而不是直接写完整歌词。
+
+## 推荐使用方式
+
+### 新作品创作
+
+```text
+我想写一首歌，灵感是：……
+请按老胡音乐流程先做选题题眼，不要直接写歌词。
+```
+
+### 确认方向后继续
+
+```text
+我确认方向 B，但副歌核心句还不够好。
+请先打磨题眼和副歌核心句，不要进入曲式。
+```
+
+### 进入曲式与风格
+
+```text
+题眼和副歌核心句确认。
+请进入曲式与风格阶段，输出主风格、BPM、曲式结构和纯音乐 style prompt。
+```
+
+### 按曲式填词
+
+```text
+曲式与风格确认。
+请根据已确认的题眼、副歌核心句和曲式骨架，写完整歌词初稿。
+```
+
+### 优化已有歌词
+
+```text
+请诊断这版歌词。
+重点看副歌韵脚、可唱性、画面感和 AI 味。
+先给修改建议，不要直接整首覆盖。
+```
+
+### 生成最终投喂内容
+
+```text
+歌词确认。
+请输出最终 style prompt 和带演唱控制的 controlled lyrics。
+```
+
+## 项目结构
+
+```text
+老胡音乐/
+├── 00_输入原料/
+├── 01_作品项目/
+│   ├── 进行中/
+│   ├── 已完成/
+│   └── 已发布/
+├── 02_共享资产库/
+│   ├── 00_核心规则/
+│   ├── 01_模板库/
+│   ├── 02_音乐语言资产/
+│   ├── 03_质量评估与预测系统/
+│   ├── 04_案例经验库/
+│   └── 05_工具流程/
+├── 03_发布与课程化/
+├── 04_诊断与系统日志/
+├── skills/
+├── AGENTS.md
+├── README.md
+└── 输入输出索引.md
+```
+
+### 目录说明
+
+| 目录 | 作用 |
+|---|---|
+| `00_输入原料/` | 暂时还没有归属作品的灵感、口述、参考材料和反馈。 |
+| `01_作品项目/` | 所有正式音乐作品。每首歌一个独立目录。 |
+| `02_共享资产库/` | 跨作品复用的规则、模板、质量评估、案例经验和流程。 |
+| `03_发布与课程化/` | 把音乐作品经验转成发布文案、教程、口播、课程内容。 |
+| `04_诊断与系统日志/` | 项目级诊断、结构调整记录、自动化检查结果。 |
+| `skills/` | 项目专属 AI Agent 执行规则。 |
+
+## 单首作品目录
+
+每首正式作品推荐结构：
+
+```text
+<作品名>/
+├── 00_项目总览.md
+├── 00_阶段确认记录.md
+├── 00_原始输入/
+├── 01_选题题眼/
+├── 02_曲式与风格/
+├── 03_歌词/
+├── 04_歌词优化/
+├── 05_演唱控制/
+├── 06_生成素材/
+├── 07_发布包装/
+└── 09_归档复盘.md
+```
+
+核心原则：
+
+- 一个作品的材料尽量都放回该作品目录。
+- 同一阶段的普通迭代默认覆盖当前阶段文件，不堆一堆“修改版”“最终版”“再改版”。
+- 已确认的阶段可以保留确认稿；未确认阶段不要默认推进。
+- 音频、图片、视频等不可覆盖素材可以单独归档。
+
+## 核心 skill
+
+| Skill | 负责阶段 |
+|---|---|
+| `laohu_music` | 总入口、阶段路由、作品归档、阶段确认。 |
+| `laohu_music_topic` | 灵感整理、选题角度、题眼、副歌核心句。 |
+| `laohu_music_structure` | 曲式结构、曲风判断、纯音乐 style prompt。 |
+| `laohu_lyrics_writer` | 按曲式填词、完整歌词初稿。 |
+| `laohu_lyrics_repair` | 歌词诊断、修改建议、反馈沉淀。 |
+| `laohu_sing_control` | 最终 style prompt、controlled lyrics、演唱控制。 |
+| `laohu_music_review` | 审查复盘、生成反馈、发布反馈、经验回流。 |
+
+## 共享资产
+
+共享资产统一使用 Markdown，既给人读，也给 AI Agent 调用。
+
+重点文件：
+
+- `02_共享资产库/00_核心规则/老胡音乐核心规则手册.md`
+- `02_共享资产库/05_工具流程/音乐创作阶段交接合约.md`
+- `02_共享资产库/05_工具流程/音乐创作多角色协作流程.md`
+- `02_共享资产库/02_音乐语言资产/题眼与副歌hook库/题眼与副歌核心句规则.md`
+- `02_共享资产库/02_音乐语言资产/韵脚与唱感库/韵脚与唱感安全规则.md`
+- `02_共享资产库/02_音乐语言资产/曲式结构库/曲式结构与乐段功能规则.md`
+- `02_共享资产库/02_音乐语言资产/演唱控制库/演唱控制与style_prompt规则.md`
+- `02_共享资产库/03_质量评估与预测系统/老胡音乐质量评估与预测总协议.md`
+
+## 创作质量原则
+
+这个项目强调几条底层判断：
+
+- 题眼不是标题，而是整首歌的情绪发动机。
+- 副歌核心句不是口号，必须可唱、可记、押韵、有画面。
+- 曲式和风格必须服务题眼，不能默认套通用抒情流行。
+- 歌词不能只是观点分行，必须有动作、物件、声音锚点和人物处境。
+- 韵脚不是最后修饰，副歌确认前就要设计主韵和句尾。
+- 演唱控制不是堆标签，而是让关键句被听见。
+- 老胡反馈不是临时聊天，长期有效经验要及时写回规则。
+
+## 维护规则
+
+### Markdown-only
+
+项目共享资产统一使用 Markdown 文件。需要结构化判断时，在 Markdown 内用标题、清单、表格和代码块表达。
+
+### 及时沉淀
+
+当创作过程中发现长期有效经验，应及时更新：
+
+- 对应 `skills/laohu_*`。
+- `02_共享资产库/02_音乐语言资产/`。
+- `02_共享资产库/03_质量评估与预测系统/`。
+- 当前作品的 `00_阶段确认记录.md` 或 `09_归档复盘.md`。
+
+不要等最终复盘时再统一总结，否则容易丢失上下文。
+
+### 保持目录干净
+
+- 不要为每次小修改创建新文件。
+- 不要把外部项目整包搬进来。
+- 不要把临时过程稿混入最终交付目录。
+- 不要把同一功能维护成多套规则文件。
+
+## 常用命令
+
+安装全部 skills：
+
+```bash
+npx skills add LaohuAD/luna-music-creative-system
+```
+
+只安装总入口 skill：
+
+```bash
+npx skills add LaohuAD/luna-music-creative-system --skill laohu_music
+```
+
+从 GitHub 拉一份模板：
+
+```bash
+npx degit LaohuAD/luna-music-creative-system my-music-system
+```
+
+检查项目：
+
+```bash
+bash skills/laohu_music/scripts/check_laohu_music.sh
+```
+
+创建作品：
+
+```bash
+bash skills/laohu_music/scripts/create_music_project.sh "作品名"
+```
+
+列出当前作品：
+
+```bash
+find 01_作品项目/进行中 -maxdepth 1 -type d | sort
+```
+
+## 注意
+
+- 本项目不直接生成音频文件；它负责把创作链路、歌词、风格提示词和演唱控制打磨到适合投喂 AI 音乐平台。
+- 本项目默认需要一个能读取和修改本地文件的 AI Agent 配合使用。
+- 作品质量依赖阶段确认。越早跳过题眼、副歌核心句和韵脚确认，后面越容易返工。
+- README 面向使用者；更细的执行纪律请看 [AGENTS.md](AGENTS.md) 和 [老胡音乐核心规则手册.md](02_共享资产库/00_核心规则/老胡音乐核心规则手册.md)。

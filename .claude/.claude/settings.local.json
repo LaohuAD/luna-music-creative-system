@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(grep -E \"\\\\.\\(md|txt|json\\)$\")",
-      "Bash(wc -l commands/luna/*.md)"
-    ]
-  }
-}
